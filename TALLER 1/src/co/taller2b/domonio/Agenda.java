@@ -1,6 +1,8 @@
 package co.taller2b.domonio;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Agenda {
@@ -60,17 +62,10 @@ public class Agenda {
         }
         return false;
     }
-    /*public List<Contacto> ordenarContactosEnOrdenAlfabetico(){
-        List<Contacto> contactosOrdenAlfabetico = new ArrayList<>();
-        List<String> nombres = new ArrayList<>();
-        for (Contacto contacto:this.contactos) {
-            nombres.add(contacto.getNombre());
-        }
-        Collections.sort(nombres);
-        for (String nom : nombres) {
-
-        }
-    }*/
+    public List<Contacto> ordenarContactosEnOrdenAlfabetico(){
+        Collections.sort(contactos);
+        return contactos;
+    }
 
     public List<Contacto> getContactos() {
         return contactos;

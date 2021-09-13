@@ -1,6 +1,6 @@
 package co.taller2b.domonio;
 
-public class Contacto{
+public class Contacto implements Comparable<Contacto>{
     //Atributos
     private String nombre;
     private String apellido;
@@ -26,5 +26,10 @@ public class Contacto{
 
     public void setNroCelular(long nroCelular) {
         this.nroCelular = nroCelular;
+    }
+
+    @Override
+    public int compareTo(Contacto o) {
+        return this.nombre.compareTo(o.getNombre());
     }
 }

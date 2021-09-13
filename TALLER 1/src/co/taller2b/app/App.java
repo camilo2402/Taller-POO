@@ -31,5 +31,11 @@ public class App {
             System.out.println(contacto.getNombre()+" "+contacto.getApellido()+"\n*Nro de celular: "+contacto.getNroCelular());
             System.out.println("\n");
         }
+        System.out.println("Despues de ordenar.");
+        AgendaDavid.ordenarContactosEnOrdenAlfabetico();
+        for (Contacto contacto: AgendaDavid.getContactos()) {
+            System.out.println(contacto.getNombre()+" "+contacto.getApellido()+"\n*Nro de celular: "+contacto.getNroCelular());
+            System.out.println("\n");
+        }
     }
 }
