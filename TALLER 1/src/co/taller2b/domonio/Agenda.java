@@ -1,7 +1,6 @@
 package co.taller2b.domonio;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,7 +12,8 @@ public class Agenda {
 
     public void crearContacto(Contacto contacto){
         if(contacto != null){
-            if(contactos.size()<CAPACIDAD_MAXIMA_DE_CONTACTOS) {
+            Contacto contactoBuscado = buscarNombre(contacto.getNombre());
+            if(contactos.size()<CAPACIDAD_MAXIMA_DE_CONTACTOS && contactoBuscado==null) {
                 this.contactos.add(contacto);
             }
         }
